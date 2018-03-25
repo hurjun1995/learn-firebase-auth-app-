@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types'
 
 import { View } from 'react-native';
 
-import { FormLabel, FormInput, FormValidationMessage } from 'react-native-elements';
+import { FormLabel, FormInput, FormValidationMessage } from 'react-native-elements'
 import { isEmpty } from '../../utils/validate'
 import styles from "./styles"
 
@@ -14,7 +14,7 @@ class AuthTextInput extends Component {
         return (
             <View style={styles.container}>
                 {
-                    (showLable) &&
+                    (showLabel) &&
                     <FormLabel>{this.props.label}</FormLabel>
                 }
                 <FormInput
@@ -39,7 +39,7 @@ class AuthTextInput extends Component {
     }
 }
 
-AuthTextInput.PropTypes = {
+AuthTextInput.propTypes = {
     label: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.number

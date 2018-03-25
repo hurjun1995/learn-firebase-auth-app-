@@ -14,21 +14,21 @@ const authReducer = (state = initialState, action) => {
                 ['user', JSON.stringify(user)]
             ]);
 
-            state = Object.assign({}, state, { isLoggedIn: true, user: user});
+            state = Object.assign({}, state, { isLoggedIn: true, user: user });
 
             return state;
 
-            case t.LOGGED_OUT:
-                let keys = ['user'];
-                AsyncStorage.multiRemove(keys);
+        case t.LOGGED_OUT:
+            let keys = ['user'];
+            AsyncStorage.multiRemove(keys);
 
-                state = Object.assign({}, state, {isLoggedIn: false, user: null});
+            state = Object.assign({}, state, {isLoggedIn: false, user: null });
 
-                return state;
+            return state;
 
-            default:
-                return state;
-    };
+        default:
+            return state;
+    }
+};
 
-    export default authReducer;
-}
+export default authReducer;

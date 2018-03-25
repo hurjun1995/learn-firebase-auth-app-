@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { theme } from "../../index";
+import { theme } from "../../index"
 const { windowWidth, fontSize, fontFamily, normalize } = theme;
 
 const styles = StyleSheet.create({
@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
         marginBottom: 10
     },
 
-    inputContainer: {
+    inputContainer:{
         width: windowWidth - 40,
         height: normalize(65),
         fontSize: fontSize.regular + 2,
